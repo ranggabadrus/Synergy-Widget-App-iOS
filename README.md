@@ -30,3 +30,5 @@ Depedency:
  - reduxjs/toolkit
  - react-native-linear-gradient
 
+Video demo via google drive:
+https://drive.google.com/drive/folders/1ukmaVqbv0VSce9bkudmr6NyCLDjnirq3
