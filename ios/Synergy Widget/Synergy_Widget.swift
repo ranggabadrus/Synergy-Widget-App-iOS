@@ -57,9 +57,9 @@ struct Synergy_WidgetEntryView : View {
               Image("home")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 35, height: 35, alignment: .trailing )
+                .frame(width: 25, height: 25, alignment: .trailing )
               Text("HOME")
-                .font(.system(size:10))
+                .font(.system(size:8))
                 .bold()
             })}
           Spacer()
@@ -68,22 +68,32 @@ struct Synergy_WidgetEntryView : View {
               Image("search")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 35, height: 35, alignment: .trailing )
+                .frame(width: 25, height: 25, alignment: .trailing )
               Text("SEARCH")
-                .font(.system(size:10))
+                .font(.system(size:8))
                 .bold()
             })
           }
           Spacer()
           VStack(alignment: .leading) {
             Link(destination: URL(string: "synergy://setting")!, label: {
-              
               Image("setting")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 35, height: 35, alignment: .trailing )
+                .frame(width: 25, height: 25, alignment: .trailing )
               Text("SETTING")
-                .font(.system(size:10))
+                .font(.system(size:8))
+                .bold()
+            })}
+          Spacer()
+          VStack(alignment: .leading) {
+            Link(destination: URL(string: "synergy://webview")!, label: {
+              Image("computer")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 25, height: 25, alignment: .trailing )
+              Text("WEBVIEW")
+                .font(.system(size:8))
                 .bold()
             })}
           Spacer()

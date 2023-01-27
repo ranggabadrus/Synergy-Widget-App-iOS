@@ -1,4 +1,4 @@
-import {View, Text, Switch} from 'react-native';
+import {View, Text, Switch, StatusBar} from 'react-native';
 import React from 'react';
 import {RootState, useAppDispatch} from '../redux/store';
 import {useSelector} from 'react-redux';
@@ -14,6 +14,8 @@ export default function Setting() {
         isDarkTheme ? styles.containerDark : styles.containerLight,
         styles.center,
       ]}>
+      <StatusBar barStyle={isDarkTheme ? 'light-content' : 'dark-content'} />
+
       <Text style={isDarkTheme ? styles.textLight : styles.textDark}>
         Dark mode is {isDarkTheme ? 'ON' : 'OFF'}
       </Text>

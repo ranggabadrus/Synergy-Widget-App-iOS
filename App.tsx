@@ -11,11 +11,13 @@ import Search from './src/pages/Search';
 import Setting from './src/pages/Setting';
 import {Provider, useSelector} from 'react-redux';
 import {RootState, store} from './src/redux/store';
+import WebView from './src/pages/WebView';
 
 type RootStackParamList = {
   Home: undefined;
   Search: undefined;
   Setting: undefined;
+  WebView: undefined;
 };
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
@@ -27,6 +29,7 @@ const linking = {
       Home: 'home',
       Setting: 'setting',
       Search: 'search',
+      WebView: 'webview',
     },
   },
 };
@@ -65,6 +68,16 @@ function App(): JSX.Element {
             tabBarLabel: 'Setting',
             tabBarIcon: ({color, size}) => (
               <FontAwesome name="gear" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="WebView"
+          component={WebView}
+          options={{
+            tabBarLabel: 'WebView',
+            tabBarIcon: ({color, size}) => (
+              <FontAwesome name="desktop" color={color} size={size} />
             ),
           }}
         />
